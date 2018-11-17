@@ -1,0 +1,39 @@
+//
+//  NetWork_ZJ_get_message_list.m
+//  CMPLjhMobile
+//
+//  Created by lei song on 2016/11/14.
+//  Copyright © 2016年 CMP_Ljh. All rights reserved.
+//
+
+#import "NetWork_ZJ_incident_requests_get_repair_ex.h"
+
+
+@implementation ZjGetRepairExModel
+
+
+@end
+
+
+@implementation ZjGetRepairExRespone
+
+//- (NSDictionary *)propertyMappingObjcJson {
+//    return @{@"result" : @"result"};
+//}
+- (NSDictionary *)classNameForItemInArray {
+    return @{@"result" : @"ZjGetRepairExModel"};
+}
+
+@end
+
+@implementation NetWork_ZJ_incident_requests_get_repair_ex
+
+-(Class)responseType{
+    return [ZjGetRepairExRespone class];
+}
+
+-(NSString*)responseCategory{
+    return @"/api/v1/incident_requests/get_repair_ex";
+}
+
+@end

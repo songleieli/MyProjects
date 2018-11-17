@@ -1,0 +1,68 @@
+//
+//  JrMobile-Prefix.pch
+//  JrLoanMobile
+//
+//  Created by song leilei on 15/11/13.
+//  Copyright (c) 2015年 Junrongdai. All rights reserved.
+//
+
+#ifndef JrLoanMobile_JrMobile_Prefix_pch
+#define JrLoanMobile_JrMobile_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+#ifdef __OBJC__
+
+#import "SLGlobalDefines.h"
+#import "WCOnbConfiguration.h"
+#import "GlobalData.h"
+#import "GlobalDefine.h"
+#import "GlobalFunc.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "BaseViewController.h"
+#import "BaseTableMJViewController.h"
+#import "ZJBaseViewController.h"
+#import "TBBaseViewController.h"
+
+#import "NSData+Base64.h"
+#import "Masonry.h"//add by liyanjun
+
+#import "CMPZjLifeMobileAppDelegate.h"
+
+
+#import "ZJLoginService.h"
+#import "TBLoginService.h"
+
+#import "BundleUtil.h"
+#import "NSDictionary+JSON.h"
+
+/*
+ * Category
+ */
+#import "UIView+AutoLayout.h"
+#import "UIView+AutoLayout_960.h"
+#import "UIView+AutoLayout_1080.h"
+#import "UIFont+Custorm.h"
+#import "UIView+Common.h"
+#import "NSString+Common.h"
+#import "UILabel+Create.h"
+#import "UIButton+Create.h"
+#import "UIFont+Custorm.h"
+#import "iToast.h"
+
+/*
+ *AVPlayer
+ */
+#import <AVFoundation/AVFoundation.h>
+
+#import "Header.h"
+
+
+
+
+
+#endif
