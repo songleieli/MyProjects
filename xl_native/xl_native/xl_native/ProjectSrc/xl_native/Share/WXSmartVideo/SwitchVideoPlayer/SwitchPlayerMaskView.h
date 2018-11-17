@@ -39,7 +39,7 @@
 -(instancetype)initWithFrame:(CGRect)frame listLoginModel:(HomeListModel *)listLoginModel;
 
 /**返回按钮*/
-@property (nonatomic,strong) UIButton *backButton;
+//@property (nonatomic,strong) UIButton *searchButton;
 /**头像*/
 @property(nonatomic,strong) UIImageView * imageViewUser;
 /**赞*/

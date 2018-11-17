@@ -917,7 +917,6 @@
 		04DCE5CC214A023E0045F75E /* UIViewController+CLPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE5BF214A023E0045F75E /* UIViewController+CLPlayerRotation.m */; };
 		04DCE5CD214A023E0045F75E /* CLPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE5C4214A023E0045F75E /* CLPlayer.bundle */; };
 		04DCE5D0214A05420045F75E /* UIView+CLSetRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE5CE214A05420045F75E /* UIView+CLSetRect.m */; };
-		04E28F5C218942C7006A91DA /* XLHomeFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E28F5A218942C7006A91DA /* XLHomeFunctionView.m */; };
 		04E28F64218AA915006A91DA /* XLBaseTableMJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E28F62218AA914006A91DA /* XLBaseTableMJViewController.m */; };
 		04E28F6C218ABB8A006A91DA /* Callback_voice_purchase.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E28F66218ABB8A006A91DA /* Callback_voice_purchase.m */; };
 		04E28F6D218ABB8A006A91DA /* Callback_token.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E28F68218ABB8A006A91DA /* Callback_token.m */; };
@@ -930,6 +929,7 @@
 		04E28F7C218AF732006A91DA /* NetWork_voucherMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E28F7B218AF732006A91DA /* NetWork_voucherMessage.m */; };
 		04E28F8B218C22FB006A91DA /* XLFlollowUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E28F8A218C22FB006A91DA /* XLFlollowUserView.m */; };
 		04E700D3219FBD8B0096099F /* NetWork_mt_home_list.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E700D2219FBD8B0096099F /* NetWork_mt_home_list.m */; };
+		04E700D9219FF5C10096099F /* MtHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E700D7219FF5C00096099F /* MtHomeTopView.m */; };
 		04F47DD9218D92B800132D97 /* XLGchangNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F47DD7218D92B800132D97 /* XLGchangNewViewController.m */; };
 		04FB2C6D215F8533003D1D3D /* XLUserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FB2C6B215F8533003D1D3D /* XLUserInfoVC.m */; };
 		04FB2C6E215F8533003D1D3D /* XLUserInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FB2C6C215F8533003D1D3D /* XLUserInfoVC.xib */; };
@@ -2022,8 +2022,6 @@
 		04DCE5C4214A023E0045F75E /* CLPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLPlayer.bundle; sourceTree = "<group>"; };
 		04DCE5CE214A05420045F75E /* UIView+CLSetRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CLSetRect.m"; sourceTree = "<group>"; };
 		04DCE5CF214A05420045F75E /* UIView+CLSetRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CLSetRect.h"; sourceTree = "<group>"; };
-		04E28F5A218942C7006A91DA /* XLHomeFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLHomeFunctionView.m; sourceTree = "<group>"; };
-		04E28F5B218942C7006A91DA /* XLHomeFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLHomeFunctionView.h; sourceTree = "<group>"; };
 		04E28F62218AA914006A91DA /* XLBaseTableMJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBaseTableMJViewController.m; sourceTree = "<group>"; };
 		04E28F63218AA915006A91DA /* XLBaseTableMJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLBaseTableMJViewController.h; sourceTree = "<group>"; };
 		04E28F66218ABB8A006A91DA /* Callback_voice_purchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Callback_voice_purchase.m; sourceTree = "<group>"; };
@@ -2042,6 +2040,8 @@
 		04E28F8A218C22FB006A91DA /* XLFlollowUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFlollowUserView.m; sourceTree = "<group>"; };
 		04E700D1219FBD8B0096099F /* NetWork_mt_home_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork_mt_home_list.h; sourceTree = "<group>"; };
 		04E700D2219FBD8B0096099F /* NetWork_mt_home_list.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork_mt_home_list.m; sourceTree = "<group>"; };
+		04E700D7219FF5C00096099F /* MtHomeTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MtHomeTopView.m; sourceTree = "<group>"; };
+		04E700D8219FF5C10096099F /* MtHomeTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MtHomeTopView.h; sourceTree = "<group>"; };
 		04F47DD7218D92B800132D97 /* XLGchangNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLGchangNewViewController.m; sourceTree = "<group>"; };
 		04F47DD8218D92B800132D97 /* XLGchangNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLGchangNewViewController.h; sourceTree = "<group>"; };
 		04FB2C6A215F8533003D1D3D /* XLUserInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLUserInfoVC.h; sourceTree = "<group>"; };
@@ -3992,8 +3992,8 @@
 		04E28F59218942C7006A91DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04E28F5B218942C7006A91DA /* XLHomeFunctionView.h */,
-				04E28F5A218942C7006A91DA /* XLHomeFunctionView.m */,
+				04E700D8219FF5C10096099F /* MtHomeTopView.h */,
+				04E700D7219FF5C00096099F /* MtHomeTopView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -5554,6 +5554,7 @@
 				04CBC3352179C01300658E47 /* GPUImageParallelCoordinateLineTransformFilter.m in Sources */,
 				0441A28F214671230077EA1F /* NetWork_deleteComment.m in Sources */,
 				04CBC36B2179C01300658E47 /* GPUImageHueFilter.m in Sources */,
+				04E700D9219FF5C10096099F /* MtHomeTopView.m in Sources */,
 				04CBC44F2179C01300658E47 /* GPUImageKuwaharaFilter.m in Sources */,
 				04E28F71218ABB96006A91DA /* XLGameWkWebViewController.m in Sources */,
 				044E3896217434BD006145EA /* MyAttentionViewController.m in Sources */,
@@ -5667,7 +5668,6 @@
 				04CBC4172179C01300658E47 /* GPUImageRGBErosionFilter.m in Sources */,
 				04CBC27D2179C01200658E47 /* MJRefreshConst.m in Sources */,
 				048462CB2147A03D00A30F5E /* VideoPlayerView.m in Sources */,
-				04E28F5C218942C7006A91DA /* XLHomeFunctionView.m in Sources */,
 				04CBC3172179C01300658E47 /* SVProgressHUD.m in Sources */,
 				04CBC3132179C01300658E47 /* SVRadialGradientLayer.m in Sources */,
 				044E38932174331B006145EA /* MyFansViewController.m in Sources */,

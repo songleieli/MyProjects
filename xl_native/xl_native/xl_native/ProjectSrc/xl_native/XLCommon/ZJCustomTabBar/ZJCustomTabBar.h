@@ -15,10 +15,12 @@
 	NSMutableArray *_buttons;
 }
 @property (nonatomic, weak) id <ZJCustomTabBarDelegate> delegate;
-@property (nonatomic, retain) NSMutableArray *buttons;
+@property (nonatomic, strong) NSMutableArray *buttons;
+
+@property (nonatomic, assign) BOOL isBgClear;
 
 //区分 CustomTabBarController 用来判断，是不是集团要闻。如果是集团要闻，第二个按钮不需要放大。
-@property (nonatomic, copy) NSString *strCVClass;
+//@property (nonatomic, copy) NSString *strCVClass;
 
 - (id)initWithButtonImages:(NSArray *)imageArray titleArray:(NSArray*)titleArray delegate:(id<ZJCustomTabBarDelegate>)delegate;
 

@@ -22,11 +22,15 @@
         self.delegate = delegate;
         
         UILabel *lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.4)];
-        lineLabel.backgroundColor = RGBAlphaColor(222, 222, 222, 0.8);
+        lineLabel.backgroundColor = [UIColor grayColor]; //RGBAlphaColor(222, 222, 222, 0.8);
         [self addSubview:lineLabel];
         
-        
-        self.backgroundColor = [UIColor whiteColor];
+        if([NSStringFromClass([self.delegate class]) isEqualToString:@"XlHomeViewController"]){
+            self.backgroundColor = [UIColor clearColor];
+        }
+        else{
+            self.backgroundColor = [UIColor blackColor];
+        }
         
         self.buttons = [NSMutableArray arrayWithCapacity:[imageArray count]];
         int offX = 0;
@@ -35,8 +39,8 @@
         for (int i = 0; i < [imageArray count]; i++){
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             btn.tag = i;
-            btn.frame = CGRectMake(offX, 1, width, kTabBarHeight_New);
-            btn.backgroundColor = [UIColor blackColor];
+            btn.frame = CGRectMake(offX, 0.4, width, kTabBarHeight_New-0.4);
+            btn.backgroundColor = [UIColor clearColor];
             [btn addTarget:self action:@selector(tabBarButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
             
             offX += width;
@@ -90,15 +94,6 @@
             
             imgBtn.left = (btn.width - imgBtn.width)/2;
             [btn addSubview:imgBtn];
-            
-            
-            
-            
-
-            
-//            [imgBtn setImage:[[imageArray objectAtIndex:i] objectForKey:@"Default"]  forState:UIControlStateNormal];
-//            [imgBtn setImage:[[imageArray objectAtIndex:i] objectForKey:@"Seleted"]  forState:UIControlStateSelected];
-            
             [imgBtn addTarget:self action:@selector(tabBarButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
             [self.buttons addObject:btn];
             [self addSubview:btn];

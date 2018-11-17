@@ -9,6 +9,7 @@
 #import "ZJCustomTabBarLjhTableViewController.h"
 #import "SwitchPlayerViewController.h"
 #import "SwitchPlayerView.h"
+#import "MtHomeTopView.h"
 
 #import "NetWork_mt_home_list.h"
 
@@ -16,11 +17,17 @@
 @interface XlHomeViewController : ZJCustomTabBarLjhTableViewController<SamPlayerScrollViewDelegate>
 
 
+/*播放器*/
 @property (nonatomic,strong) SwitchPlayerView *playerView;
 
-//滚动条
+/*滚动条*/
 @property(nonatomic, strong) SwitchPlayerScrollView * playerScrollView;
 @property (nonatomic, strong) NSMutableArray *dataList;
 @property (nonatomic, assign) NSInteger index;
+
+/*滚动条*/
+@property (nonatomic,strong) MtHomeTopView *topView;
+
+
 
 @end

@@ -23,6 +23,17 @@
     return _dataList;
 }
 
+- (MtHomeTopView *)topView{
+    if (!_topView) {
+        CGRect frame = CGRectMake(0, 0, ScreenWidth, kNavBarHeight_New);
+        _topView = [[MtHomeTopView alloc] initWithFrame:frame];
+        
+        //test
+//        _topView.backgroundColor = [UIColor redColor];
+    }
+    return _topView;
+}
+
 - (SwitchPlayerScrollView *)playerScrollView{
     if (!_playerScrollView) {
         _playerScrollView = [[SwitchPlayerScrollView alloc] initWithFrame:self.view.bounds];
@@ -40,6 +51,8 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [UIApplication sharedApplication].statusBarHidden = YES;
 }
 
 -(void)initNavTitle{
@@ -52,20 +65,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-//    SwitchPlayerViewController *playVC =[[SwitchPlayerViewController alloc] init];
-//    playVC.videoType = VideoTypeHome;
-//
-//    [self pushNewVC:playVC animated:YES];
-    
-    
     //先屏蔽，用于在加载首页，添加视频列表
+    [self setupUI];
     [self reloadVideo]; //加载当前选择标签数据，如果是点击进来的话，加载的是点击视频所属标签。
-
 }
 
 #pragma -mark ------ CustomMethod ----------
+
+-(void)setupUI{
+    
+    [self.view addSubview:self.topView];
+    
+}
 
 -(void)reloadVideo{
     
@@ -83,6 +94,9 @@
     }
     
     [self.view addSubview:self.playerScrollView];
+    
+    [self.view bringSubviewToFront:self.topView];
+    
     [self loadVedioListData];
 }
 
@@ -110,39 +124,22 @@
     if(self.dataList.count>0){
         
         HomeListModel *listModel = [self.dataList objectAtIndex:0];
-        listModel.videoUrl = @"http://192.168.180.130/miantiao/video/20181115/987654321087654325.mp4";
-        //        ImagesLoginModel *imageModel = [listLoginModel.medias objectAtIndex:0];
-        
         CGRect frame = CGRectMake(0, ScreenHeight, self.view.width, self.view.height);
         self.playerView = [[SwitchPlayerView alloc] initWithFrame:frame listLoginModel:listModel];
         _playerView.url = [NSURL URLWithString:listModel.videoUrl];//视频地址
         [_playerView playVideo];//播放
-        
-        
 //        __weak __typeof(self) weakSelf = self;
         [self.playerView setBackBlock:^{
             //[weakSelf back];
         }];
         _playerView.pushUserInfo = ^{
-            
-            //            TopicViewController *vc = [[TopicViewController alloc] init];
-            //            vc.topicViewControllerType = TopicViewControllerTypeUserInfo;
-            //            vc.userId = listLoginModel.publishId;
-            //            [weakSelf.navigationController pushViewController:vc animated:YES];
         };
         _playerView.commentClick = ^{
-//            [weakSelf.view addSubview:weakSelf.commentListView];
-//            [weakSelf.view addSubview:weakSelf.commentView];
         };
         _playerView.hideCommentClick = ^{
-//            [weakSelf.commentView removeFromSuperview];
-//            weakSelf.commentView = nil;
-//            [weakSelf.commentListView removeFromSuperview];
-//            weakSelf.commentListView = nil;
         };
         [self.playerScrollView addSubview:self.playerView];
     }
-    
 }
 
 #pragma mark --------- PlayerScrollViewDelegate ----------
@@ -156,11 +153,6 @@
         [self reloadPlayerWithLive:self.dataList[index]];
         self.index = index;
     }
-    
-//    [self.commentView removeFromSuperview];
-//    self.commentView = nil;
-//    [self.commentListView removeFromSuperview];
-//    self.commentListView = nil;
 }
 
 - (void)reloadPlayerWithLive:(HomeListModel *)listLoginModel{
@@ -170,20 +162,16 @@
     
     
     CGRect frame = CGRectMake(0, ScreenHeight, self.view.width, self.view.height);
-    listLoginModel.videoUrl = @"http://192.168.180.130/miantiao/video/20181115/987654321087654325.mp4";
     
     
     self.playerView = [[SwitchPlayerView alloc] initWithFrame:frame listLoginModel:listLoginModel];
-    NSString *userId = @"";
     if(listLoginModel.videoUrl.length > 0){
-        //        ImagesLoginModel *imageModel = [listLoginModel.medias objectAtIndex:0];
-        //        userId = imageModel.id;
         //视频地址
         _playerView.url = [NSURL URLWithString:listLoginModel.videoUrl];
         //播放
         [_playerView playVideo];
     }
-    __weak __typeof(self) weakSelf = self;
+//    __weak __typeof(self) weakSelf = self;
     [self.playerView setBackBlock:^{
         //[weakSelf back];
     }];

@@ -59,7 +59,7 @@
 @property (copy, nonatomic) NSString *topic;
 @property (copy, nonatomic) NSString *addr;
 @property (copy, nonatomic) NSString *iswholook;
-@property (copy, nonatomic) NSString *likeSum;
+@property (strong, nonatomic) NSNumber *likeSum;
 @property (copy, nonatomic) NSString *dslikeSum;
 @property (copy, nonatomic) NSString *forwardWechatFriendSum;
 @property (copy, nonatomic) NSString *forwardCircleofFriendSum;
